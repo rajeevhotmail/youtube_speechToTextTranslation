@@ -1,0 +1,492 @@
+
+(.venv) D:\python_work\youtube_bot>python liveSpeechToText.py
+[INFO] Reader attempting to authenticate...
+[INFO] Authenticating account: rajeev.india@gmail.com
+Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=165192437098-5pqvdr5lr2fdpsg064j6cfmj53cqabmj.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A64833%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube.force-ssl&state=df6l32gCB9Kh5SCByGayvpb9OiWuAs&access_type=offline
+[SUCCESS] Authentication successful for account: rajeev.india@gmail.com
+[INFO] Fetching live chat ID for video ID: xTnyy6KlNnM
+[DEBUG] API response: {
+    "kind": "youtube#videoListResponse",
+    "etag": "u0-5LTDs_1m0FS5Ro5F9j8tAZD8",
+    "items": [
+        {
+            "kind": "youtube#video",
+            "etag": "jtUumIMJ0dbWpwGNBE45RUWXkGQ",
+            "id": "xTnyy6KlNnM",
+            "liveStreamingDetails": {
+                "actualStartTime": "2024-12-12T06:46:52Z",
+                "scheduledStartTime": "2024-12-12T06:45:00Z",
+                "concurrentViewers": "580",
+                "activeLiveChatId": "Cg0KC3hUbnl5NktsTm5NKicKGFVDSzFYQ0pxRUVGZnQ1bGo2emhmaUVaQRILeFRueXk2S2xObk0"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    }
+}
+[SUCCESS] Live Chat ID found: Cg0KC3hUbnl5NktsTm5NKicKGFVDSzFYQ0pxRUVGZnQ1bGo2emhmaUVaQRILeFRueXk2S2xObk0
+[SUCCESS] Reader authenticated. Live Chat ID: Cg0KC3hUbnl5NktsTm5NKicKGFVDSzFYQ0pxRUVGZnQ1bGo2emhmaUVaQRILeFRueXk2S2xObk0
+[DEBUG] API response for live stream info: {
+    "kind": "youtube#videoListResponse",
+    "etag": "u0-5LTDs_1m0FS5Ro5F9j8tAZD8",
+    "items": [
+        {
+            "kind": "youtube#video",
+            "etag": "jtUumIMJ0dbWpwGNBE45RUWXkGQ",
+            "id": "xTnyy6KlNnM",
+            "liveStreamingDetails": {
+                "actualStartTime": "2024-12-12T06:46:52Z",
+                "scheduledStartTime": "2024-12-12T06:45:00Z",
+                "concurrentViewers": "580",
+                "activeLiveChatId": "Cg0KC3hUbnl5NktsTm5NKicKGFVDSzFYQ0pxRUVGZnQ1bGo2emhmaUVaQRILeFRueXk2S2xObk0"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 1,
+        "resultsPerPage": 1
+    }
+}
+[WARNING] Stream URL (hlsManifestUrl) not found in liveStreamingDetails.
+[INFO] Falling back to yt-dlp to fetch stream URL.
+[INFO] Stream URL fetched with yt-dlp: https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_l
+ive_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/pl
+aylist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/
+keepalive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vp
+rv,playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8
+[INFO] Live stream URL found: https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broad
+cast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_du
+ration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/keepalive
+/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playli
+st_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8
+[DEBUG] Starting segment download...
+ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable
+-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-lib
+aom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzi
+mg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme
+--enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:36.015+00:00')
+[hls @ 000001f05b9e0d80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.20
+0.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_
+duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/513269
+32,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJfQ
+dSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/278/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+    Last message repeated 1 times
+Input #0, hls, from 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/requ
+iressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30
+/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp
+/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/s
+ig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8':
+  Duration: N/A, start: 554.133333, bitrate: N/A
+  Program 0
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Video: h264 (Main) ([27][0][0][0] / 0x001B), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 30 fps, 30 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+File 'temp_audio_segment.wav' already exists. Overwrite? [y/N] y
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, wav, to 'temp_audio_segment.wav':
+  Metadata:
+    ISFT            : Lavf61.7.100
+  Stream #0:0: Audio: aac (LC) ([255][0][0][0] / 0x00FF), 44100 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Press [q] to stop, [?] for help
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:42.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/280/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/281/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/282/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/283/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:44.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/284/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')its/s speed=3.01x
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:46.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/285/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:48.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/286/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:50.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/287/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:54.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/288/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/289/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:56.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/290/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:55:58.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/291/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')its/s speed=1.59x
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:00.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/292/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:02.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/293/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:04.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/294/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:06.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/295/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:08.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/296/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:10.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/297/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')its/s speed=1.31x
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:12.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/298/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:14.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/299/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:16.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/300/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:18.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/301/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')its/s speed=1.22x
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:22.015+00:00')
+[https @ 000001f05bdb0fc0] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/302/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/303/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:24.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/304/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:26.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/305/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:28.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/306/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:30.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/307/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')its/s speed= 1.2x
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:32.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/308/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:34.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/309/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+KeyboardInterrupt received. Stopping threads...3kbits/s speed=1.22x
+Program terminated gracefully.
+[https @ 000001f05c9d4040] Opening 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/source/yt_live
+_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playl
+ist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/11/pacing/0/kee
+palive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,
+playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8' for reading
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-DISCONTINUITY-SEQUENCE:1')
+[hls @ 000001f05b9e0d80] Skip ('#EXT-X-PROGRAM-DATE-TIME:2024-12-12T06:56:36.015+00:00')
+[https @ 000001f05bfd6e80] Opening 'https://rr2---sn-cnoa-itql.googlevideo.com/videoplayback/id/xTnyy6KlNnM.1/itag/96/source/yt_live_broadcast/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.
+200.7.84/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlis
+t_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/keepalive/yes/fexp/5132
+6932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJ
+fQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8/sq/310/goap/lmt%3D18/govp/lmt%3D18/dur/2.000/file/seg.ts' for reading
+[out#0/wav @ 000001f05c157000] video:0KiB audio:1019KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.008817%
+size=    1019KiB time=00:01:03.99 bitrate= 130.5kbits/s speed=1.17x
+Exiting normally, received signal 2.
+Error during download: Command '['ffmpeg', '-i', 'https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1734008162/ei/AolaZ832EN209fwPxZm1yQI/ip/117.200.7.84/id/xTnyy6KlNnM.1/itag/96/
+source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-cnoa-itql.googlevideo.com/xpc/EgVo2aDS
+NQ%3D%3D/playlist_duration/30/manifest_duration/30/vprv/1/playlist_type/DVR/initcwndbps/1512500/met/1733986562,/mh/gj/mm/44/mn/sn-cnoa-itql/ms/lva/mv/m/mvi/2/pcm2cms/yes/pl/20/rms/lva,lva/dover/1
+1/pacing/0/keepalive/yes/fexp/51326932,51331020,51335594,51347747/mt/1733986118/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_
+duration,vprv,playlist_type/sig/AJfQdSswRQIhAP2bzB-56nDdQFHtgXcWOVgEK71NVoFAFZuu9JADi6F5AiAeEWJk6PouwmYBjettzUwGzjMhUpKvv7cPLAW-6NYHgQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv
+,mvi,pcm2cms,pl,rms/lsig/AGluJ3MwRgIhALJGpHU6HtBNn7xOIsbc31GCLzSqQ29TItxnRgpQACETAiEAkLwc-NQa9kQmUplzndI9RT18oDOFzfgp7yvbDCMwd20%3D/playlist/index.m3u8', '-c', 'copy', 'temp_audio_segment.wav']' returned non-zero exit status 255.
+[DEBUG] Segment download complete.
+[DEBUG] Starting conversion...
+[INFO] Transcribed text: हमने किराया नहीं किराया तो वह पहली बात है हम अभी उसमें जा ही नहीं रहे हैं उसे क्या है कि सुप्रीम कोर्ट भी बल्ले बल्ले आर इंटरनेशनल स्टैंडर्ड हम तो सबसे आगे हैं टेक्नोलॉजिकल वह भले हर आंकड़े में आप सबसे पीछे हो लेकिन आप केवल एवं में दुनिया में नंबर एक है मालनूट्रिशन हो फ्रीडम इंडेक्स
+[DEBUG] Conversion complete.
+[DEBUG] Starting transcription...
+[DEBUG] Transcription complete.
+[INFO] Transcribed text: हमने किराया नहीं किराया तो वह पहली बात है हम अभी उसमें जा ही नहीं रहे हैं उसे क्या है कि सुप्रीम कोर्ट भी बल्ले बल्ले आर इंटरनेशनल स्टैंडर्ड हम तो सबसे आगे हैं टेक्नोलॉजिकल वह भले हर आंकड़े में आप सबसे पीछे हो लेकिन आप केवल एवं में दुनिया में नंबर एक है मालनूट्रिशन हो फ्रीडम इंडेक्स
+
+(.venv) D:\python_work\youtube_bot>
+

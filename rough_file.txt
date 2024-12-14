@@ -1,0 +1,26 @@
+🦅🌄🌳🌊 🦅 for the eagle 🌄 for mountains 🌳 for forests  🌊 for seas
+
+
+
+aasmaan se aaya farista pyaar ka sabak sik la ne. ☁️🕊️👼❤️📖🎶☁️ for aasmaan 🕊️ or 👼 for farishta ❤️ for pyaar  📖 for sabak  🎶 for lyrical tone
+
+netsh trace start capture=yes tracefile=d:\capture.etl
+
+Flying high, high, I'm a bird in the sky (I'm an eagle)
+I'm an eagle that rides on the breeze
+High, high (I fly) what a feeling to fly
+Over mountains and forests and seas
+
+ऊँची, ऊँची उड़ान भरता हुआ,
+आसमान में मैं एक पक्षी हूँ,
+मैं एक चील हूँ जो हवा पे सवार है,
+ऊँची, ऊँची उड़ने का कैसा अहसास है!
+
+पहाड़ों के ऊपर, जंगलों के ऊपर,
+और समुद्रों के भी ऊपर,
+मैं उड़ता हूँ,
+
+आज़ाद पंछी, बंधन कोई नहीं!
+
+https://cloud.google.com/speech-to-text/docs/languages
+https://cloud.google.com/translate/docs/languages
